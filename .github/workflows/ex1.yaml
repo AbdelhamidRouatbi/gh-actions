@@ -8,5 +8,5 @@ jobs:
   dire-bonjour:
     runs-on: ubuntu-latest
     steps:
-      name: affichage
-      run: echo "Hello world!"
+      - name: affichage
+        run: echo "Hello world!"
