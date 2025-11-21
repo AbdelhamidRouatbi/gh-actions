@@ -1,0 +1,23 @@
+name: exercice 3
+
+on:
+  pull_request
+
+jobs:
+  lancer-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: installer java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: '25'
+
+      - name: recuperer le code
+        uses: actions/checkout@v4
+
+      - name: compiler le code
+        run: mvn -B package
+
+      - name: tester
+        run: mvn -B test
