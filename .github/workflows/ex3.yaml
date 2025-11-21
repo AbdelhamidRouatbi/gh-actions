@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PATHAPI: ${{ vars.PATHAPI }}
+      MAVARIABLE: "123"
+      SECRET: ${{ secrets.CLE_API }}
+
     steps:
       - name: installer java
         uses: actions/setup-java@v4
