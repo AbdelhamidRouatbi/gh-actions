@@ -1,0 +1,12 @@
+name: afficher message
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  dire-bonjour:
+    runs-on: ubuntu-latest
+    steps:
+      name: affichage
+      run: echo "Hello world!"
