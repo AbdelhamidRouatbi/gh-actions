@@ -7,6 +7,8 @@ on:
 jobs:
   executer-java:
     runs-on: ubuntu-latest
+    env:
+      PATHAPI: ${{variables.PATHAPI}}
     steps:
       - name: installer java
         uses: actions/setup-java@v4
